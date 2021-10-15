@@ -40,6 +40,7 @@ public class VehicleCheckTest extends TestBase {
 		Thread.sleep(2000);
 		List<WebElement> li = myCarChkPageObj.getVehicleDetails();
 		System.out.println(data);
+		//Stripping spaces in the vehicle number
 		String vNum = data.replaceAll("\\s+", "");
 		Map<String, String> expectedRes = expected.get(vNum);
 		Map<String, String> actualRes = new HashMap<>();
